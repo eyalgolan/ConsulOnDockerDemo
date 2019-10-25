@@ -1,0 +1,23 @@
+{
+  "datacenter": "dc1",
+  "data_dir": "/opt/consulclient",
+  "log_level": "INFO",
+  "node_name": "client1",
+  "server": true,
+  "ports" : {
+
+    "dns" : 53,
+    "http" : 8500,
+    "rpc" : 8400,
+    "serf_lan" : 8301,
+    "serf_wan" : 8302,
+    "server" : 8300
+  },
+
+  "start_join" : [
+    "172.17.4.161:8301",
+    "172.17.4.161:8302",
+    "172.17.4.161:8300",
+    "172.17.4.161:8500"
+    ]
+}

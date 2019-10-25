@@ -1,0 +1,7 @@
+#!/bin/bash
+./root/script-httpd & \
+./root/consul agent -data-dir="/tmp/consul" -config-file=/root/client1.json /root/watch1.json & \
+./root/consul watch -http-addr=172.17.4.161:8500 -type=key -key "SE-Funnel/index.html" "/usr/bin/my-key-handler.sh"
+
+
+

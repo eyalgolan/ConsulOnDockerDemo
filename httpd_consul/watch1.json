@@ -1,0 +1,9 @@
+{
+  "watches": [
+    {
+      "type": "keyprefix",
+      "key": "SE-Funnel/index.html",
+      "handler": "/usr/bin/my-key-handler.sh"
+    }
+   ]
+}
