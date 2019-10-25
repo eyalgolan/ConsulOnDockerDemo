@@ -4,7 +4,7 @@ A project I've made a few years back - Consul running inside docker containers.
 Note that this project was built in 2015, and both Docker and Consul made significant since then.
 
 # Setup
-How to setup consul on containers:
+How to setup Consul on containers:
 
 Start leader: 
 ```
