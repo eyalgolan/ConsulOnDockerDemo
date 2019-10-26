@@ -8,5 +8,5 @@ while read line; do
     printf "${line}\n" >> /var/www/html/eventlog.txt
 }
 
-curl http://172.17.4.161:8500/v1/kv/SE-Funnel/index.html?raw > /var/www/html/index.html
+curl http://172.17.4.161:8500/v1/kv/test/index.html?raw > /var/www/html/index.html
 done
