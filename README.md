@@ -43,6 +43,8 @@ The watcher:
     "type": "keyprefix",
     "key: "test/index.html",
     "handler": "/usr/bin/my-key-handler.sh"
+   }
+  ]
 ```
 The script the watcher runs if an event is identified:
 ```
