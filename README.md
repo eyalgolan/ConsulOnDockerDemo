@@ -10,13 +10,7 @@ Note that this project was built in 2015, and both Docker and Consul made signif
 docker run -d -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 progrium/consul -server -bootstrap -ui-dir /ui
 ```
 
-2. Get node1's ip 
-
-```docker ps```
-
-copy the node1's id
-
-```docker inspect id | grep 172```
+2. Get node1's ip  (```docker ps``` -> copy the node1's id -> ```docker inspect id | grep 172```)
 
 3. Change the ip in httpd_consul's script file, ```client1.json``` to node1's ip
 
