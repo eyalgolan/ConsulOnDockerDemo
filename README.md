@@ -11,8 +11,11 @@ docker run -d -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 progrium/consul 
 ```
 
 2. Get node1's ip 
+
 ```docker ps```
+
 copy the node1's id
+
 ```docker inspect id | grep 172```
 
 3. Change the ip in httpd_consul's script file, ```client1.json``` to node1's ip
