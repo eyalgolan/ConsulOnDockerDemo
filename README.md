@@ -38,9 +38,23 @@ The script that runs on the container with the application and consul:
 ```
 The watcher:
 ```
-
+"watches": [
+  {
+    "type": "keyprefix",
+    "key: "test/index.html",
+    "handler": "/usr/bin/my-key-handler.sh"
 ```
 The script the watcher runs if an event is identified:
 ```
+#!/bin/bash
+echo "New event: ${SERF_EVENT}. Data follows..."
 
+while read line; do
+{
+  printf "${line}\n"
+  printf "${line}\n" >>/var/www/html/eventlog.txt
+}
+
+curl http://172.17.4.181:8500/v1/kv/test/index.html?raw > /var/www/html/index.html
+done
 ```
