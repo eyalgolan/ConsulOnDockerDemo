@@ -30,7 +30,17 @@ key location: /data/tmp/state<number>/data.mdb
 The servers update each other in the following way:
 
 The script that runs on the container with the application and consul:
-
+```
+#!/bin/bash
+./root/script-httpd & \
+./root/consul agent -data-dir"/tmp/consul" -config-file=/root/client1.json /root/watch1.json & \
+./root/consul watch -http-addr=172.17.4.181:8500 -type=key -key "test/index.html" "/usr/bin/my-key-handler.sh"
+```
 The watcher:
+```
 
+```
 The script the watcher runs if an event is identified:
+```
+
+```
