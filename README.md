@@ -1,10 +1,9 @@
 # ConsulOnDockerDemo
-A project I've made a few years back - Consul running inside docker containers.
+A project I've made a few years back - Consul on docker containers.
 
-Note that this project was built in 2015, and both Docker and Consul made significant since then.
+Note that this project was built in 2015, and both Docker and Consul made significant changes and upgrades since then.
 
 # Setup
-How to setup Consul on containers:
 
 Start leader: 
 ```
@@ -26,3 +25,12 @@ docker run -p 80:80 -p 8401:8400 -p 8501:8500 -p 8601:53/udp -h node2 httpd_cons
 ```
 
 key location: /data/tmp/state<number>/data.mdb
+
+# Events 
+The servers update each other in the following way:
+
+The script that runs on the container with the application and consul:
+
+The watcher:
+
+The script the watcher runs if an event is identified:
